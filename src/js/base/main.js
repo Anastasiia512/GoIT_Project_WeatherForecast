@@ -2,7 +2,8 @@ import axios from 'axios';
 import { responseParser, minDayTemp, maxDayTemp } from '../base/responseParser';
 import mainPageWeatherInfo from '../base/mainPageWeatherInfo';
 import getFiveDateWeather from '../base/five_days_weather';
-
+import {timeInfo} from '../../date-time-info/loadDate';
+import moment from 'moment'
 const appid = 'e8208d2596ef2ec6abe477b7469a394e';
 import showChart from './diagram';
 
@@ -23,6 +24,7 @@ formSearchCity.addEventListener( `submit`, ( event => {
       mainPageWeatherInfo( parseData );
 
       getFiveDateWeather( parseData );
+     
       console.log( parseData );
       console.log( minDayTemp( parseData.list[0] ) );
       console.log( maxDayTemp( parseData.list[0] ) );

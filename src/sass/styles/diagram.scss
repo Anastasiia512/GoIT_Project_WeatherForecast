@@ -41,11 +41,12 @@
         width: 110px;
 
         button {
+            border: none;
             border-radius: 50%;
-            background-color: rgb(241, 241, 241);
-            opacity: 0.2;
+            background-color: rgba(241, 241, 241, .2);
             width: 27px;
             height: 27px;
+            cursor: pointer;
         }
     }
 }
@@ -78,6 +79,7 @@
 
 @media screen and (min-width: 1096px) {
     .diagram {
+        margin-bottom: 0;
         &__block {
             padding-bottom: 0;
         }

@@ -15,13 +15,11 @@ export const timeInfo = function (parseData) {
   if (!parseData.city.timezone) {
     return;
   }
-
-  
-
-const handleDateTimeInfo = function () {
-  const date = moment().format('DD ');
-  const day = moment().format('ddd');
-  const month = moment().format('MMMM');
-  dateInfo(day, date, month);
+  const handleDateTimeInfo = function () {
+    const date = moment().format('DD ');
+    const day = moment().format('ddd');
+    const month = moment().format('MMMM');
+    dateInfo(day, date, month);
+  };
 };
 handleDateTimeInfo();
